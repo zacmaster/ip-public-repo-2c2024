@@ -14,7 +14,11 @@ SECRET_KEY = 'django-insecure-2drt2_^@w@6)3npj24wi%xe^&88icb)dw&e0!^%eao3r6l4fkt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '::1']
+ALLOWED_HOSTS = [
+    'animated-invention-9gr5rv546gfprwj-8000.app.github.dev',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -120,3 +124,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # VARIABLES QUE INTEGRAN LOS REDIRECTS DE AUTH
 LOGIN_REDIRECT_URL = 'index-page'
 LOGOUT_REDIRECT_URL = 'index-page'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://animated-invention-9gr5rv546gfprwj-8000.app.github.dev',  # Your Codespaces URL
+    'http://127.0.0.1:8000',  # Localhost HTTP
+    'https://127.0.0.1:8000',  # Localhost HTTPS
+    'http://localhost:8000',   # Localhost HTTP
+    'https://localhost:8000',  # Localhost HTTPS
+]
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
